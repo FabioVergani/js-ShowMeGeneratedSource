@@ -1,9 +1,8 @@
 javascript:
 void((function(w){
- var s, h, e=w, d=e.document;
+ var e=w, d=e.document, s=d.doctype, h=d.documentElement;
  if(e=e.open()){
-  s=d.doctype;
-  (h=d.createDocumentFragment().appendChild(d.documentElement.cloneNode(true))).normalize();
+  (h=d.createDocumentFragment().appendChild(h.cloneNode(true))).normalize();
   d=e.document;
   e=new XMLSerializer();
   d.write([
